@@ -1,5 +1,5 @@
 import React from 'react'
-import { styles } from './.'
+import './style/styles.scss'
 
 const App = () => {
   return (
