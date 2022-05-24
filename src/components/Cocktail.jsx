@@ -11,7 +11,7 @@ const { data, isLoading, isError } = useGetAllCocktailsByInputQuery(id);
         data.drinks.map(({ strDrink, strCategory, strAlcoholic, strDrinkThumb, strInstructions }) => (
             <div>
               <h2>{strDrink}</h2>
-              <img src={strDrinkThumb} alt="cocktail"></img>
+              <img src={strDrinkThumb} alt={strDrink}></img>
               <p>{strCategory}</p>
               <p>{strAlcoholic}</p>
               <p>{strInstructions}</p>

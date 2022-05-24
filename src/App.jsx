@@ -8,7 +8,11 @@ import Cocktail from "./components/Cocktail";
 
 const App = () => {
   return (
-    <div>App</div>
+    <>
+      <div classname="main">
+        jfkfjklsd
+      </div>
+    </>
   )
 }
 
