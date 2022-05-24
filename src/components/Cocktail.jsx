@@ -5,19 +5,23 @@ const { data, isLoading, isError } = useGetAllCocktailsByInputQuery(id);
  
   return (
     <>
-      {isError && <p>Er is een error</p>}
+      {isError && <p>An error occured..r</p>}
       {isLoading && <p>Loading...</p>}
       {data &&
         data.drinks.map(({ strDrink, strCategory, strAlcoholic, strDrinkThumb, strInstructions }) => (
-            <div>
-              <h2>{strDrink}</h2>
-              <img src={strDrinkThumb} alt={strDrink}></img>
-              <p>{strCategory}</p>
+          <div className="flex-grid">
+            <div className="col">
+              <h2 className="title">{strDrink}</h2>
+              <figure>
+                <img src={strDrinkThumb} alt={strDrink}></img>
+                <figcaption>{strCategory}</figcaption>
+              </figure> 
               <p>{strAlcoholic}</p>
               <p>{strInstructions}</p>
             </div>
-          )
-        )}
+          </div>
+        )
+      )}
     </>
   );
 };

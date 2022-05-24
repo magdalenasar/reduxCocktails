@@ -9,7 +9,7 @@ const cocktailApi = createApi({
     getCocktailsByInput: builder.query({
       query: (input) => ({ url: `/search.php?s=${input}` }),
     }),
-🍸    getCocktailById: builder.query({
+    getCocktailById: builder.query({
       query: (id) => ({ url: `/lookup.php?i=${id}` }),
     }),
   }),
