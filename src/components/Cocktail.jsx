@@ -1,7 +1,7 @@
-import { useGetCocktailByIdQuery } from "../data/cocktailApi";
+import { useGetCocktailsByIdQuery } from "../data/cocktailApi";
 
 const Cocktail = ({ id }) => {
-const { data, isLoading, isError } = useGetAllCocktailsByInputQuery(id);
+const { data, isLoading, isError } = useGetCocktailsByIdQuery(id);
  
   return (
     <>
@@ -14,10 +14,10 @@ const { data, isLoading, isError } = useGetAllCocktailsByInputQuery(id);
               <h2 className="title">{strDrink}</h2>
               <figure>
                 <img src={strDrinkThumb} alt={strDrink}></img>
-                <figcaption>{strCategory}</figcaption>
+                <figcaption>Category: {strCategory}</figcaption>
               </figure> 
-              <p>{strAlcoholic}</p>
-              <p>{strInstructions}</p>
+              <p className="tag"> Type: {strAlcoholic}</p>
+              <p><strong>Instructions how to prepare it: </strong> {strInstructions}</p>
             </div>
           </div>
         )

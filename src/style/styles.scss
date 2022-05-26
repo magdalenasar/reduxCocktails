@@ -6,15 +6,20 @@
 
 body {
     padding: 20px;
+    h1 {
+        width: 100%;
+    }
 }
 
 .flex-grid {
     display: flex;
+    gap: 10px;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 0 0 20px 0;
 
     .col {
+        flex: 1 1 250px;
         width: 32%;
         background: rgb(246, 246, 250);
         padding: 20px;
@@ -28,11 +33,29 @@ body {
 @media (max-width: 400px) {
 
     .flex-grid{
-        display: block;
+        display: inline-block;
 
         .col {
             width: 100%;
             margin: 0 0 10px 0;
         }
     }
+}
+
+.button {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+//   transition: 0.08s ease-in;
+
+  &:before {
+    content: "←";
+    position: absolute;
+    color: #3850b7;
+    left: 19%;
+    
+    &:hover {
+        opacity: 0;
+    }
+  }
 }

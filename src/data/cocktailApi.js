@@ -9,7 +9,7 @@ const cocktailApi = createApi({
     getCocktailsByInput: builder.query({
       query: (input) => ({ url: `/search.php?s=${input}` }),
     }),
-    getCocktailById: builder.query({
+    getCocktailsById: builder.query({
       query: (id) => ({ url: `/lookup.php?i=${id}` }),
     }),
   }),
@@ -17,5 +17,5 @@ const cocktailApi = createApi({
 
 export default cocktailApi;
 
-export const { useGetCocktailsByInputQuery, useGetCocktailByIdQuery } =
+export const { useGetCocktailsByInputQuery, useGetCocktailsByIdQuery } =
   cocktailApi;
